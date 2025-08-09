@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-primaria: #2B2B2F;
+    --cor-secundaria: #E3E3E3;
+    --cor-terciaria: #D84042;
+    --cor-quartenaria: #E9AD4E;
+    --fonte-principal: 'Montserrat', sans-serif;
+    --fonte-secundaria: 'Roboto', sans-serif;
+}
+
+.ultimas-noticias {
+    position: relative;
+    background-color: var(--cor-quartenaria);
+    padding: 3.75rem 1.25rem;
+    z-index: 1;
+}
+
+.ultimas-noticias::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../assets/blog-background.svg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.ultimas-noticias .container {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.ultimas-noticias h2 {
+    font-family: var(--fonte-principal);
+    font-weight: 800;
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    padding: 0 0.625rem;
+}
+
+.card-noticia {
+    background-color: var(--cor-secundaria);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 23.75rem;
+    height: 31.25rem;
+    box-shadow: 0 4px 12px var(--cor-primaria);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.card-noticia:hover {
+    transform: translateY(-5px);
+}
+
+.card-noticia img {
+    width: calc(100% - 40px); 
+    height: 12.5rem;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto 10px auto; 
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-noticia .conteudo {
+    padding: 0 20px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.card-noticia h3 {
+    font-family: var(--fonte-principal);
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: var(--cor-primaria);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 2.4em;
+}
+
+.card-noticia p {
+    font-family: var(--fonte-secundaria);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--cor-primaria);
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    max-height: 5.6rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.card-noticia p.linhas-6 {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 8.4em;
+}
+
+.card-noticia a.botao {
+    display: inline-block;
+    align-self: flex-end;
+    background-color: var(--cor-quartenaria);
+    color: var(--cor-primaria);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    margin-top: auto;
+}
+
+.card-noticia a.botao:hover {
+    background-color: var(--cor-terciaria);
+}
+
+/* === Mobile (<=1253px): carrossel horizontal com scroll snap e indicadores === */
+@media screen and (max-width: 1253px) {
+  /* Container vira flex horizontal com scroll */
+  .noticias-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 20px;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  .card-noticia {
+    flex: 0 0 80%; 
+    max-width: 80%;
+    height: auto; 
+    scroll-snap-align: start;
+    margin: 0;
+  }
+
+  .card-noticia img {
+    width: calc(100% - 40px);
+    height: auto;
+    max-height: 200px;
+    margin: 20px auto 10px auto;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+  }
+
+  .carrossel-indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .carrossel-indicadores .indicador {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(43, 43, 47, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .carrossel-indicadores .indicador.ativo {
+    background-color: var(--cor-primaria);
+  }
+}

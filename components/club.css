@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("./footer.css");
+@import url("./header.css");
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --cor-primaria: #2B2B2F;
+    --cor-secundaria: #E3E3E3;
+    --cor-terciaria: #D84042;
+    --cor-quartenaria: #E9AD4E;
+    --cor-de-fundo-alternativa: #3A3A3E;
+    --fonte-principal: 'Montserrat', sans-serif;
+    --fonte-secundaria: 'Roboto', sans-serif;
+}
+
+.club-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    background-color: var(--cor-de-fundo-alternativa);
+    padding: 3rem 15%;
+    align-items: center;
+    
+}
+
+.club-colunm-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;     /* centraliza no eixo horizontal */
+   
+}
+
+.titulo-club {
+    font-family: var(--fonte-principal);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--cor-secundaria);
+}
+
+.cor-2 {
+    color: var(--cor-quartenaria);
+}
+
+.cta-club {
+    width: fit-content;
+    display: inline-flex;
+    justify-content: center;
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    color: var(--cor-primaria);
+    border-radius: 0.9375rem;
+    padding: 0 1.25rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    cursor: pointer;
+    background-color: var(--cor-secundaria);
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-club:hover {
+    background-color: var(--cor-terciaria);
+}
+
+.club-map-wrapper {
+    width: 100%;
+}
+
+.club-maps {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 0.75rem;
+}
+
+
+@media (max-width: 900px) {
+    .club-container {
+        grid-template-columns: 1fr; 
+        text-align: center; 
+        justify-items: center;
+    }
+
+    .club-colunm-1 {
+        align-items: center;
+    }
+
+    .club-maps {
+        height: 300px;
+    }
+}

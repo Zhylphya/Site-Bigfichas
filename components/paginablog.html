@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Artigos</title>
+    <link rel="stylesheet" href="./paginablog.css" />
+    <link rel="html" href="./club.html" />
+    <link rel="html" href="../index.html" />
+</head>
+<body>
+  <header>
+      <nav class="menu">
+          <a href="../index.html">
+            <img src="../assets/logo-nav.svg" class="img-logo" alt="logo BigFichas" id="blog">
+          </a>
+
+          <ul class="menu-list">
+              <li><a class="menu-list-nav" href="../index.html#home">home</a></li>
+              <li><a class="menu-list-nav" href="../index.html#findus">onde estamos</a></li>
+              <li><a class="menu-list-nav" href="./club.html">poker in live</a></li>
+              <li><a class="menu-list-nav" href="./paginablog.html">blog</a></li>
+          </ul>
+          <div class="container-btn">
+            <input type="checkbox" id="menu-mobile" class="menu-btn-check" />
+            <label for="menu-mobile">
+                <span class="menu-btn"></span>
+            </label>
+
+            <ul class="menu-list-mobile">
+                <li><a class="menu-list-nav-mobile" href="#home">home</a></li>
+                <li><a class="menu-list-nav-mobile" href="#findus">onde estamos</a></li>
+                <li><a class="menu-list-nav-mobile" href="#club">poker in live</a></li>
+                <li><a class="menu-list-nav-mobile" href="#blog">blog</a></li>
+            </ul>
+          </div>
+      </nav>
+  </header>
+
+  <main>
+    <section aria-label="Lista de artigos do blog" class="blog-posts">
+      <article class="card" tabindex="0">
+          <time datetime="2025-08">Agosto 2025</time>
+          <h2 class="card-title">Título do artigo 1</h2>
+          <img src="./capa1.jpg" alt="Descrição da imagem do artigo 1" class="card-image" />
+          <p class="card-summary">
+              Este é um resumo do artigo 1 que deve ser limitado a quatro linhas com reticências no final para indicar que tem mais conteúdo...
+          </p>
+          <a href="./artigo1.html" class="btn-leia-mais" aria-label="Leia mais sobre o artigo 1">Leia mais</a>
+      </article>
+
+      <article class="card" tabindex="0">
+          <time datetime="2025-07">Julho 2025</time>
+          <h2 class="card-title">Título do artigo 2</h2>
+          <img src="./capa2.jpg" alt="Descrição da imagem do artigo 2" class="card-image" />
+          <p class="card-summary">
+              Este é um resumo do artigo 2 que deve ser limitado a quatro linhas com reticências no final para indicar que tem mais conteúdo...
+          </p>
+          <a href="./artigo2.html" class="btn-leia-mais" aria-label="Leia mais sobre o artigo 2">Leia mais</a>
+      </article>
+
+      <article class="card" tabindex="0">
+          <time datetime="2025-06">Junho 2025</time>
+          <h2 class="card-title">Título do artigo 3</h2>
+          <img src="./capa3.jpg" alt="Descrição da imagem do artigo 3" class="card-image" />
+          <p class="card-summary">
+              Este é um resumo do artigo 3 que deve ser limitado a quatro linhas com reticências no final para indicar que tem mais conteúdo...
+          </p>
+          <a href="./artigo3.html" class="btn-leia-mais" aria-label="Leia mais sobre o artigo 3">Leia mais</a>
+      </article>
+
+      <article class="card" tabindex="0">
+          <time datetime="2025-05">Maio 2025</time>
+          <h2 class="card-title">Título do artigo 4</h2>
+          <img src="./capa4.jpg" alt="Descrição da imagem do artigo 4" class="card-image" />
+          <p class="card-summary">
+              Resumo do artigo 4 com limite de linhas e reticências para mais conteúdo...
+          </p>
+          <a href="./artigo4.html" class="btn-leia-mais" aria-label="Leia mais sobre o artigo 4">Leia mais</a>
+      </article>
+
+      <article class="card" tabindex="0">
+          <time datetime="2025-04">Abril 2025</time>
+          <h2 class="card-title">Título do artigo 5</h2>
+          <img src="./capa5.jpg" alt="Descrição da imagem do artigo 5" class="card-image" />
+          <p class="card-summary">
+              Resumo do artigo 5 com limite de linhas e reticências para mais conteúdo...
+          </p>
+          <a href="./artigo5.html" class="btn-leia-mais" aria-label="Leia mais sobre o artigo 5">Leia mais</a>
+      </article>
+
+      <article class="card" tabindex="0">
+          <time datetime="2025-03">Março 2025</time>
+          <h2 class="card-title">Título do artigo 6</h2>
+          <img src="./capa6.jpg" alt="Descrição da imagem do artigo 6" class="card-image" />
+          <p class="card-summary">
+              Resumo do artigo 6 com limite de linhas e reticências para mais conteúdo...
+          </p>
+          <a href="./artigo6.html" class="btn-leia-mais" aria-label="Leia mais sobre o artigo 6">Leia mais</a>
+      </article>
+    </section>
+
+    <nav aria-label="Paginação do blog" class="pagination">
+      <ul>
+          <li><a href="./pagina1.html" aria-current="page">1</a></li>
+          <li><a href="./pagina2.html">2</a></li>
+          <li><a href="./pagina3.html">3</a></li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer class="footer" role="contentinfo" aria-label="Rodapé do site BigFichas">
+    <div class="footer-container">
+
+      <!-- Versão Desktop -->
+      <div class="footer-desktop">
+
+        <!-- Coluna 1: Logo e textos -->
+        <section class="footer-col footer-logo" aria-labelledby="footer-empresa-title">
+          <figure>
+            <img src="../assets/logo-footer.svg" alt="Logo BigFichas" class="footer-logo-img" />
+            <figcaption class="footer-confiança">confiança que vale ficha</figcaption>
+          </figure>
+          <p class="footer-dev">Desenvolvido por <span class="cor-1">Dev&amp;Click</span></p>
+        </section>
+
+        <!-- Coluna 2: Navegação -->
+        <nav class="footer-col footer-empresas" aria-labelledby="footer-empresas-title" role="navigation">
+          <h2 id="footer-empresas-title">Empresas</h2>
+          <ul>
+            <li><a href="../index.html#home" aria-label="Página inicial">Home</a></li>
+            <li><a href="../index.html#findus" aria-label="Página onde estamos">Onde Estamos</a></li>
+            <li><a href="/components/club.html" aria-label="Página Poker In Live">Poker In Live</a></li>
+            <li><a href="#blog" aria-label="Blog">Blog</a></li>
+          </ul>
+        </nav>
+
+        <!-- Coluna 3: Informações de contato -->
+        <address class="footer-col footer-contato" aria-labelledby="footer-contato-title">
+          <h2 id="footer-contato-title">Informações de Contato</h2>
+
+          <div class="contato-item">
+            <img src="../assets/footer-telefone.svg" alt="" aria-hidden="true" class="contato-icon" />
+            <div>
+              <p class="contato-label">Telefone</p>
+              <a href="tel:+5583998727772" class="contato-info" aria-label="Número de telefone">(83) 99872-7772</a>
+            </div>
+          </div>
+
+          <div class="contato-item">
+            <img src="../assets/footer-email.svg" alt="" aria-hidden="true" class="contato-icon" />
+            <div>
+              <p class="contato-label">Email</p>
+              <a href="mailto:contato@bigfichas.com" class="contato-info" aria-label="Endereço de email">contato@bigfichas.com</a>
+            </div>
+          </div>
+
+          <div class="contato-item">
+            <img src="../assets/footer-local.svg" alt="" aria-hidden="true" class="contato-icon" />
+            <div>
+              <p class="contato-label">Localização</p>
+              <p class="contato-info">Rua Odon Bezerra, 333, Liberdade</p>
+            </div>
+          </div>
+        </address>
+      </div>
+
+      <!-- Versão Mobile -->
+      <div class="footer-mobile">
+
+        <!-- Logo e texto -->
+        <div class="footer-logo-confiança">
+          <img src="../assets/logo-footer.svg" alt="Logo BigFichas" />
+          <p>Confiança que vale ficha!</p>
+        </div>
+
+        <!-- Ícones de contato -->
+        <div class="mobile-contact-icons" aria-label="Informações de contato simplificadas">
+          <a href="tel:+5583998727772" aria-label="Telefone">
+            <img src="../assets/footer-telefone.svg" alt="Ícone de telefone" width="36" height="36" />
+          </a>
+          <a href="mailto:contato@bigfichas.com" aria-label="Email">
+            <img src="../assets/footer-email.svg" alt="Ícone de email" width="36" height="36" />
+          </a>
+          <a href="https://goo.gl/maps/exemplo" target="_blank" rel="noopener" aria-label="Localização">
+            <img src="../assets/footer-local.svg" alt="Ícone de localização" width="36" height="36" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Separador -->
+      <hr class="footer-separator" />
+
+      <!-- Rodapé final -->
+      <div class="footer-bottom">
+        <p>2025 BigFichas. Todos os direitos reservados. <span class="mobile-info"> Desenvolvido por Dev&Click</span></p>
+      </div>
+
+    </div>
+
+    </footer>
+
+     <script src="./scripts.js"></script>
+</body>
+</html>

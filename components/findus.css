@@ -1,0 +1,219 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-primaria: #2B2B2F;
+    --cor-secundaria: #E3E3E3;
+    --cor-terciaria: #D84042;
+    --cor-quartenaria: #E9AD4E;
+    --fonte-principal: 'Montserrat', sans-serif;
+    --fonte-secundaria: 'Roboto', sans-serif;
+}
+
+.findus {
+    display: block;
+    justify-content: center;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);    width: 100%;
+    background-color: var(--cor-primaria);
+    padding: 0 10%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 120vw;
+    }
+
+.findus-titulo {
+    color: var(--cor-secundaria);
+    display: block;
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-size: 2rem;
+    font-weight: 800px;
+}
+
+.findus-titulo::first-letter {
+    text-transform: uppercase;
+}
+
+.cor-1 {
+    color: var(--cor-quartenaria);
+}
+
+.findus-container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 2rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.findus-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.findus-subtitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: var(--cor-secundaria);
+    line-height: 1.4;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 0.625;
+    padding: 0.75rem 1rem;
+    width: 24.20rem;
+    height: 9.75rem;
+    font-size: 25px;
+    font-family: var(--fonte-secundaria);
+    font-weight: 800px;
+    }
+
+.findus-subtitulo img {
+    width: 2.87rem;
+    height: 2.87rem;
+    flex-shrink: 0;
+}
+
+.img-card {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+    border: 0;
+    padding: 0;
+    margin: -1px;
+}
+
+.findus-subtitulo::first-letter {
+    text-transform: uppercase;
+}
+
+.findus-subtitulo:nth-child(odd):hover {
+    background-color: var(--cor-quartenaria);
+}
+
+.findus-subtitulo:nth-child(even):hover {
+    background-color: var(--cor-terciaria);
+}
+
+.findus-subtitulo:hover {
+    cursor: default;
+    transition: background-color 0.3s ease;
+}
+
+.carousel {
+  position: relative;
+  max-width: 37.5rem; 
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    max-width: 37.5rem;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 10px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel-slide {
+    width: calc(100% - 10px);
+    box-sizing: border-box;
+    padding: 0;
+    flex-shrink: 0;
+    margin: 0 5px;
+}
+
+.img-card {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--cor-terciaria);
+    opacity: 50%;
+    border: none;
+    border-radius: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    z-index: 10;
+    user-select: none;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media (max-width: 1254px), (max-height: 838px) {
+  .findus-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .carousel {
+    order: -1;
+    max-width: 90%;
+    margin-bottom: 1.5rem;
+  }
+
+  .findus-column {
+    order: 0;
+    width: 90%;
+    gap: 1rem;
+    text-align: justify; 
+  }
+
+  .findus-subtitulo {
+    font-size: 1.1rem;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+
+  .findus-subtitulo img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
